@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--navigation throughout the webpage-->
+    <nav class="my-nav" id="my-nav">
+        <img src="images/chesslogo.png" alt="chesslogo" id="chess-logo" />
+        <ul class="option-list" id="p1">
+            <li class="options" id="option-1">Play</li>
+            <li class="options" id="option-2">Puzzle</li>
+            <li class="options" id="option-3">Learn</li>
+            <li class="options" id="option-4">Watch</li>
+            <li class="options" id="option-5">Social</li>
+            <li class="options" id="option-6">More</li>
+        </ul>
+
+        <input class="search" id="search" type="text" placeholder="Search" />
+
+        <ul class="option-list" id="p2">
+            <li class="options" id="option-7">Search</li>
+            <li class="options" id="option-8">Help?</li>
+        </ul>
+    </nav>
+
+    <!--Game body for the chess board game management and other stuff-->
+    <div class="game-body">
+        <div class="board-sec" id="board-sec">
+
+            <!--Black Profile view along with timer-->
+            <div class="black-ts" id="black-ts">
+                <div class="player-profile" id="black-profile">Black Player</div>
+                <div class="collection" id="collection-1"></div>
+                <div class="timer" id="clock-1">30:00</div>
+            </div>
+
+            <!--Game body with dynamic piece arrangement through scripts.js-->
+            <div class="board-border" id="board-border">
+                <div id="chess-board"></div>
+            </div>
+
+            <!--White Profile view along with timer-->
+            <div class="white-ts" id="white-ts">
+                <div class="player-profile" id="white-profile">White Player</div>
+                <div class="collection" id="collection-2"></div>
+                <div class="timer" id="clock-2">30:00</div>
+            </div>
+        </div>
+
+        <!--Description through the running game and management of it through navigation-->
+        <div class="game-desc" id="game-desc">
+
+            <nav class="desc-nav" id="desc-nav">
+                <p class="dn-element" id="moves" >Moves</p>
+                <p class="dn-element" id="review">Review</p>
+                <p class="dn-element" id="details">Details</p>
+                <p class="dn-element" id="openings">Openings</p>
+            </nav>
+
+            <div class="move-list" id="move-list">
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="Rules/Pin.js"></script>
+    <!-- <script src="MovementAndCapture/PieceAnimation.js"></script> -->
+    <script type="module" src="MovementAndCapture/Pawn.js"></script>
+    <script type="module" src="MovementAndCapture/Knight.js"></script>
+    <script type="module" src="MovementAndCapture/Bishop.js"></script>
+    <script type="module" src="MovementAndCapture/Rook.js"></script>
+    <script type="module" src="MovementAndCapture/Queen.js"></script>
+    <script type="module" src="MovementAndCapture/King.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://kit.fontawesome.com/6004d467c9.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
